@@ -19,8 +19,8 @@
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 import { TPost } from "@/types";
-import Like from "@/components/Like";
-import Tag from "@/components/Tag";
+import Like from "@/components/Like/index.vue";
+import Tag from "@/components/Tag/index.vue";
 
 @Component({
   name: "Article",

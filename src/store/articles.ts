@@ -37,8 +37,8 @@ const actions = {
     const posts = storage
       ? JSON.parse(storage)
       : await axios
-          .get("http://localhost:8080/db.json")
-          .then((res): Promise<TPost[]> => res.data.posts);
+          .get("http://localhost:3000/posts")
+          .then((res): Promise<TPost[]> => res.data);
 
     commit("setPosts", posts);
   },

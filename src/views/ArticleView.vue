@@ -45,9 +45,9 @@ export default class ArticleView extends Vue {
 
   @Action("fetchPosts") fetchPosts!: () => Promise<void>;
 
-  get currentPost(): TPost {
+  get currentPost(): TPost | undefined {
     const { id } = this.$route.params;
-    return this.posts?.find((post: TPost) => post.id == id);
+    return this.posts?.find((post: TPost) => +post.id === +id);
   }
 
   async created() {

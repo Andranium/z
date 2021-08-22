@@ -26,7 +26,10 @@ export default class Like extends Vue {
   }) => void;
 
   increase() {
-    this.increaseLikes({ targetPostId: this.post.id, count: this.post.like++ });
+    this.increaseLikes({
+      targetPostId: this.post.id,
+      count: (this.post.like as number)++,
+    });
   }
 }
 </script>
